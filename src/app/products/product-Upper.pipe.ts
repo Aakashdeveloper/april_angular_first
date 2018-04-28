@@ -6,10 +6,8 @@ import {IProduct} from './products';
 })
 
 export class ProductUpperPipe implements PipeTransform{
-    transform(value:IProduct):IProduct[]{
-        if(value<20){
-            value = value +10
-        }
+    transform(value:number):number{
+       
         return value
     }
 }

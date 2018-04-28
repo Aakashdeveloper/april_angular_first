@@ -31,7 +31,7 @@ export class ProductComponent implements OnInit{
    ngOnInit():void{
        this._producService.getProducts()
            .subscribe((data) => this.products = data,
-                    (err) => this.errorMessage = <any>err )
+                    (err) => this.errorMessage = err )
 
    }
   
@@ -56,7 +56,7 @@ function add(a,b){
   return a+b
 }
 
-var add = (a,b) =>{return a+b}
+var add = (a,b) =>{this.sum = a+b}
 
 */
 
